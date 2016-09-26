@@ -52,7 +52,7 @@ public class YoutubePlayerModule extends ReactContextBaseJavaModule implements A
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
         Log.d(TAG, "on activity result");
         if (requestCode == YOUTUBE_PLAYER_ACTIVITY && resultCode == Activity.RESULT_CANCELED) {
             Log.d(TAG, "promise resolved");
